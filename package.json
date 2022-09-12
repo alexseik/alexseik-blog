@@ -18,6 +18,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@fontsource/boogaloo": "^4.5.9",
     "@fontsource/montserrat": "^4.5.12",
     "gatsby": "^4.22.0",
     "gatsby-plugin-emotion": "^7.22.0",
@@ -28,7 +29,8 @@
     "gatsby-transformer-sharp": "^4.22.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "sass": "^1.54.9"
+    "sass": "^1.54.9",
+    "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
     "@types/node": "^17.0.45",
