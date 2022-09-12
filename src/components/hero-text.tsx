@@ -3,21 +3,29 @@ import Typewriter from "typewriter-effect"
 import styled from "@emotion/styled"
 
 const strings = [
-  "<br/>Desarrollador JS con más de 10 años de experiencia",
-  "<br/>Hago aplicaciones basadas en JavaScript",
-  "<br/>Utilizo las últimas tecnologías y frameworks",
-  "<br/>Tengo experiencia en múltiples lenguajes y tecnologías",
-  "<br/>Soy Ingeniero Informático<br/>",
+  "Desarrollador con más de 10 años de experiencia",
+  "Hago aplicaciones basadas en JavaScript",
+  "Utilizo las últimas tecnologías y frameworks",
+  "Tengo experiencia en múltiples lenguajes y tecnologías",
+  "Soy Ingeniero Informático",
 ]
 
 const TextsContainer = styled.div({
+  borderRadius: "5px",
   display: "flex",
   flexDirection: "column",
   fontSize: "2rem",
   color: "white",
   padding: "1rem",
   backgroundColor: "rgb(0,0,180,0.4)",
-  fontFamily: "'Boogaloo', cursive",
+})
+
+const Text = styled.div({
+  margin: "1rem 0",
+})
+
+const EmptyText = styled.div({
+  height: 0,
 })
 
 export declare interface DelayedTextProps {
@@ -37,16 +45,18 @@ const DelayedText = (props: DelayedTextProps) => {
   }, [delay])
 
   return isShown ? (
-    <Typewriter
-      onInit={(tw) => {
-        tw.changeDelay(35).typeString(text).start()
-      }}
-      options={{
-        cursor: "",
-      }}
-    />
+    <Text>
+      <Typewriter
+        onInit={(tw) => {
+          tw.changeDelay(35).typeString(text).start()
+        }}
+        options={{
+          cursor: "",
+        }}
+      />
+    </Text>
   ) : (
-    <div></div>
+    <EmptyText />
   )
 }
 

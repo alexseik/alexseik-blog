@@ -3,9 +3,10 @@ import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 
 const base = css({
-  fontSize: "20px",
-  fontFamily: "'Gill Sans Extrabold', Helvetica, sans-serif",
-  color: "black",
+  fontSize: "2rem",
+  letterSpacing: "0.2rem",
+  fontFamily: "'Boogaloo', cursive",
+  color: "white",
   textDecoration: "none",
 })
 
