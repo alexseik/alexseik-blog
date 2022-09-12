@@ -1,7 +1,6 @@
 import React from "react"
 import { css } from "@emotion/react"
 import { Link } from "gatsby"
-import HeroImage from "./hero-image"
 import Name from "./name"
 
 const links = [
@@ -54,17 +53,12 @@ const navbarStyles = css({
   justifyContent: "space-between",
 })
 
-const sectionStyles = css({})
-
 const Navbar = () => {
   return (
-    <section css={sectionStyles}>
-      <HeroImage />
-      <header css={navbarStyles}>
-        <Name />
-        <Menus></Menus>
-      </header>
-    </section>
+    <header css={navbarStyles}>
+      <Name />
+      <Menus></Menus>
+    </header>
   )
 }
 
