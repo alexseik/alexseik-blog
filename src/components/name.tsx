@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "@emotion/styled"
-import { css } from "@emotion/react"
+import { Media } from "./media"
 
-const base = css({
+const DesktopName = styled.a({
   fontSize: "2rem",
   letterSpacing: "0.2rem",
   fontFamily: "'Boogaloo', cursive",
@@ -10,13 +10,23 @@ const base = css({
   textDecoration: "none",
 })
 
-const Base = styled.a``
+const MobileName = styled.a({
+  fontSize: "1.4rem",
+  fontFamily: "'Boogaloo', cursive",
+  color: "white",
+  textDecoration: "none",
+})
 
 const Name = () => {
   return (
-    <Base href="/" css={base}>
-      Alejandro Garrido López
-    </Base>
+    <div>
+      <Media at="sm">
+        <MobileName href="/">Alejandro Garrido López</MobileName>
+      </Media>
+      <Media greaterThanOrEqual="md">
+        <DesktopName href="/">Alejandro Garrido López</DesktopName>
+      </Media>
+    </div>
   )
 }
 
