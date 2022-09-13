@@ -1,17 +1,14 @@
 import * as React from "react"
 import Hero from "../components/hero"
+import Layout from "../components/layout"
 
-// navbar
-// main banner
-// my journey
-// courses
-// blog
-// footer
 const IndexPage = () => {
   return (
-    <main>
-      <Hero />
-    </main>
+    <Layout>
+      <main>
+        <Hero />
+      </main>
+    </Layout>
   )
 }
 
