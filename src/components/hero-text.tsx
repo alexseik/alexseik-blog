@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import Typewriter from "typewriter-effect"
 import styled from "@emotion/styled"
+import { isDesktop as useDesktop } from "../hooks/useMediaQuery"
 
 const strings = [
   "Desarrollador con más de 10 años de experiencia",
@@ -61,13 +62,27 @@ const DelayedText = (props: DelayedTextProps) => {
 }
 
 const HeroText = () => {
+  const isDesktop = useDesktop()
+  console.log({ isDesktop })
   return (
     <TextsContainer>
-      <DelayedText text={strings[0]} delay={0}></DelayedText>
-      <DelayedText text={strings[1]} delay={3000}></DelayedText>
-      <DelayedText text={strings[2]} delay={6000}></DelayedText>
-      <DelayedText text={strings[3]} delay={9000}></DelayedText>
-      <DelayedText text={strings[4]} delay={12000}></DelayedText>
+      {isDesktop ? (
+        <>
+          <DelayedText text={strings[0]} delay={0}></DelayedText>
+          <DelayedText text={strings[1]} delay={3000}></DelayedText>
+          <DelayedText text={strings[2]} delay={6000}></DelayedText>
+          <DelayedText text={strings[3]} delay={9000}></DelayedText>
+          <DelayedText text={strings[4]} delay={12000}></DelayedText>
+        </>
+      ) : (
+        <Typewriter
+          options={{
+            strings,
+            autoStart: true,
+            cursor: "",
+          }}
+        />
+      )}
     </TextsContainer>
   )
 }
