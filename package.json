@@ -16,12 +16,14 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@artsy/fresnel": "^6.1.0",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@fontsource/boogaloo": "^4.5.9",
     "@fontsource/montserrat": "^4.5.12",
     "gatsby": "^4.22.0",
     "gatsby-plugin-emotion": "^7.22.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^2.22.0",
     "gatsby-plugin-sass": "^5.22.0",
     "gatsby-plugin-sharp": "^4.22.0",
