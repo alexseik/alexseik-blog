@@ -1,7 +1,7 @@
 import * as React from "react"
 import styled from "@emotion/styled"
+import { css } from "@emotion/react"
 import { StaticImage } from "gatsby-plugin-image"
-import "./styles.css"
 
 const Container = styled.div`
   display: flex;
@@ -39,6 +39,10 @@ const HeroImage = (props: HeroProps) => {
         src="../../images/virgen-de-la-hoz.jpg"
         alt="virgen de la hoz"
         className="hero-image"
+        css={css`
+          width: 100%;
+          height: 100vh;
+        `}
         imgStyle={{
           position: "absolute",
           top: 0,
